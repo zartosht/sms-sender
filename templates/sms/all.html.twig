@@ -1,0 +1,10 @@
+<h1>All sms statuses ({{ sms|length }})</h1>
+<ul>
+{% for item in sms %}
+    <li>
+        <h3>{{ item.getNumber() }} ({{ item.getStatusString() }})</h3>
+        <p>{{ item.getBody() }}
+        <p>Tries: {{ item.getTries() }}</p>
+    </li>
+{% endfor %}
+</ul>

@@ -1,0 +1,14 @@
+<h1>Rates</h1>
+<h2>Senders: {{ result|length }}</h2>
+<ul>
+{% for url, rate in result  %}
+    <li>
+        <h3>{{ url }}</h3>
+        <p>Success: {{ rate.success }}</p>
+        <p>Failed: {{ rate.failed }}</p>
+        <p>Success precent: {{ rate.success_precent }}%</p>
+        <p>Failed precent: {{ rate.failed_precent }}%</p>
+        <p>Total: {{ rate.total }}</p>
+    </li>
+{% endfor %}
+</ul>

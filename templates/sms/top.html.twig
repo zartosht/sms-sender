@@ -1,0 +1,11 @@
+<h1>Top {{ count }} numbers</h1>
+<ul>
+{% for item in numbers  %}
+    <li>
+        {% for key, value in item %}
+        <p>{{ key }} {{ value }}</p>
+        {% endfor %}
+        <hr>
+    </li>
+{% endfor %}
+</ul>
