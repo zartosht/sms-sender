@@ -4,23 +4,12 @@
 ```bash
 git clone `https://github.com/zartosht/sms-sender.git`
 cd sms-sender
-composer install
-cp .env.example .env // make required changes to this file to meet your system configurations
+docker-composer up
 ```
 
 ## Requirements
 
-* php 7.2.5+
-* Mysql 5.7.32
-* php7.4-redis
-* redis 5.0-alpine
-* composer
-
-## Run
-```bash
-php -t 0.0.0.0:80 -t public/ // PROJECT
-php bin/console messenger:consume async -vv // REDIS LISTENER
-```
+* docker
 
 ## Routes
 
